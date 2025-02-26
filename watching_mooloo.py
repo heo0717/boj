@@ -28,7 +28,6 @@ while i < N:
            
             break
 
-   
     total_cost += group_cost
     i = j + 1
 
