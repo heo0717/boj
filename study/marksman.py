@@ -1,21 +1,14 @@
 import sys
 input = sys.stdin.readline
 
-mark_1 = list(map(int, input().split()))
-mark_2 = list(map(int, input().split()))
+x1, y1, r1 = list(map(int, input().split()))
+x2, y2, r2 = list(map(int, input().split()))
 
-d = ((mark_1[0] - mark_2[0]) ** 2 + (mark_1[1] - mark_2[1]) ** 2) ** 0.5
+# r1 + r2 < d
+d = ((x1 - x2) ** 2 + (y1 - y2) ** 2) 
 
-# r_1 = mark_1[2]
-# r_2 = mark_2[2]
+if d < (r1 + r2)**2  :
+    print('YES')
 
-# if r_1 + r_2 <= d :
-#     print('NO')
-
-# elif d + min(r_1,r_2) <= max(r_1,r_2) :
-#     print('NO')
-
-# else :
-#     print('YES')
-
-print(d)
+else :
+    print('NO')
